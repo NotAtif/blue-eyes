@@ -8,18 +8,23 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background: linear-gradient(to right, #6a11cb, #ff99cc);
+            background: url('https://github.com/NotAtif/blue-eyes/blob/main/Screenshot%202025-02-22%20232257.png?raw=true') no-repeat center center/cover;
             height: 100vh;
+            width: 100vw;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             color: white;
+            overflow: hidden; /* Prevent scrolling */
         }
 
         h1 {
             font-size: 2rem;
             margin-bottom: 20px;
+            background: rgba(0, 0, 0, 0.5); /* Add slight transparency for better readability */
+            padding: 10px;
+            border-radius: 10px;
         }
 
         .button-container {
@@ -55,6 +60,9 @@
             font-size: 1rem;
             font-weight: bold;
             opacity: 0.7;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -73,9 +81,8 @@
 
         // Keep "No" button in place until hovered
         noBtn.addEventListener("mouseover", () => {
-            const x = Math.random() * (window.innerWidth * 0.5);
-            const y = Math.random() * (window.innerHeight * 0.5);
-            noBtn.style.position = "absolute";
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 50);
             noBtn.style.left = `${x}px`;
             noBtn.style.top = `${y}px`;
         });
