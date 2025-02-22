@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Will You Be Mine?</title>
+    <title>I'm Sorry, Zara</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            background: linear-gradient(to right, #6a11cb, #ff99cc);
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -18,18 +18,18 @@
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 20px;
         }
 
         .button-container {
-            position: relative;
             display: flex;
-            gap: 20px;
+            gap: 40px;
+            position: relative;
         }
 
         .btn {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             padding: 10px 20px;
             border: none;
             cursor: pointer;
@@ -38,17 +38,13 @@
         }
 
         .yes-btn {
-            background-color: #ff1744;
+            background-color: #4CAF50;
             color: white;
         }
 
         .no-btn {
-            background-color: #444;
+            background-color: #ff1744;
             color: white;
-            position: absolute;
-        }
-
-        .no-btn:hover {
             position: absolute;
         }
 
@@ -63,10 +59,11 @@
     </style>
 </head>
 <body>
-    <h1>Will You Be Mine Forever? ❤️</h1>
+    <h1>Zara, I know I messed up 💔<br> But will you forgive this foolish heart and let me make it up to you?</h1>
+    
     <div class="button-container">
-        <button class="btn yes-btn" onclick="submitResponse('Yes')">Yes</button>
-        <button class="btn no-btn" id="noBtn">No</button>
+        <button class="btn yes-btn" onclick="submitResponse('Yes')">Yes, I forgive you ❤️</button>
+        <button class="btn no-btn" id="noBtn">No, make me smile first 😏</button>
     </div>
     
     <div class="trademark">© ATIF</div>
@@ -74,15 +71,17 @@
     <script>
         const noBtn = document.getElementById("noBtn");
 
+        // Keep "No" button in place until hovered
         noBtn.addEventListener("mouseover", () => {
-            const x = Math.random() * window.innerWidth * 0.6;
-            const y = Math.random() * window.innerHeight * 0.6;
+            const x = Math.random() * (window.innerWidth * 0.5);
+            const y = Math.random() * (window.innerHeight * 0.5);
+            noBtn.style.position = "absolute";
             noBtn.style.left = `${x}px`;
             noBtn.style.top = `${y}px`;
         });
 
         function submitResponse(answer) {
-            alert("Yay! You made my day! ❤️");
+            alert("Zara, you made my day! Thank you! ❤️");
         }
     </script>
 </body>
