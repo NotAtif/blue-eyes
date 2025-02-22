@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be Mine?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            position: relative;
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .yes-btn {
+            background-color: #ff1744;
+            color: white;
+        }
+
+        .no-btn {
+            background-color: #444;
+            color: white;
+            position: absolute;
+        }
+
+        .no-btn:hover {
+            position: absolute;
+        }
+
+        .trademark {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Will You Be Mine Forever? ❤️</h1>
+    <div class="button-container">
+        <button class="btn yes-btn" onclick="submitResponse('Yes')">Yes</button>
+        <button class="btn no-btn" id="noBtn">No</button>
+    </div>
+    
+    <div class="trademark">© ATIF</div>
+
+    <script>
+        const noBtn = document.getElementById("noBtn");
+
+        noBtn.addEventListener("mouseover", () => {
+            const x = Math.random() * window.innerWidth * 0.6;
+            const y = Math.random() * window.innerHeight * 0.6;
+            noBtn.style.left = `${x}px`;
+            noBtn.style.top = `${y}px`;
+        });
+
+        function submitResponse(answer) {
+            alert("Yay! You made my day! ❤️");
+        }
+    </script>
+</body>
+</html>
